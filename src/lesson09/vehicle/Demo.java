@@ -1,0 +1,75 @@
+package lesson09.vehicle;
+import lesson09.vehicle.airplane.*;
+import lesson09.vehicle.car.*;
+import lesson09.vehicle.ship.*;
+public class Demo {
+public static void main (String []args ){
+	Vehicle v=new Vehicle();
+	
+	Airplane a=new Airplane(false);
+	JetFighter jf=new JetFighter(4,true);
+	lesson09.vehicle.airplane.Passenger p= new lesson09.vehicle.airplane.Passenger(false);
+	Car c=new Car(4);
+	Bus b=new Bus(8);
+	Jeep j=new Jeep(4);
+	Sport sp= new Sport (4);
+	Truck tr=new Truck(6);
+	Ship sh=new Ship(false);
+	CargoShip cs=new CargoShip(false);
+	WarShip ws= new WarShip(true);
+	lesson09.vehicle.ship.Passenger pas=new lesson09.vehicle.ship.Passenger(false); 
+	
+	v.startEngine();
+	v.stopEngine();
+	v.loadPassengers();
+	v.unLoadPassengers();
+	a.startEngine();
+	a.stopEngine();
+	a.takeOff();
+	a.land();
+	a.loadPassengers();
+	a.unLoadPassengers();
+	p.takeOff();
+	jf.startEngine();
+	jf.stopEngine();
+	jf.takeOff();
+	jf.land();
+	jf.loadPassengers();
+	jf. reloadWeapon();
+	jf.fire();
+	c.startEngine();
+	c.stopEngine();
+	c.loadPassengers();
+	c.unLoadPassengers();
+	b.startEngine();
+	b.stopEngine();
+	b.loadPassengers();
+	b.unLoadPassengers();
+	b.drive();
+	j.startEngine();
+	j.stopEngine();
+	j.drive();
+	j.driveOffRoad();
+	sp.startEngine();
+	sp.stopEngine();
+	sp.drive();
+	tr.startEngine();
+	tr.stopEngine();
+	tr.drive();
+	sh.startEngine();
+	sh.stopEngine();
+	sh.loadPassengers();
+	sh.unLoadPassengers();
+	cs.startEngine();
+	cs.stopEngine();
+	cs.loadCargo();
+	cs.unLoadCargo();
+	ws.startEngine();
+	ws.stopEngine();
+	//ws.loadPassengers();
+	//ws.unLoadPassengers();
+	ws.reloadWeapon();
+	ws.fire();
+	pas.loadPassengers();
+}
+}
